@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+//funcion que evalua si un numero es primo
+//permite que se haga multiples veces por ejecucion
+//es entero si es mayor a 1 y solo es divisible por uno y por si mismo
 char* isPrime(int n){
     int i = n - 1;
     while(i > 1){
@@ -40,6 +43,7 @@ int main(){
         }
         else{
             //entrada invalida
+            system("cls");
             printf("Invalid input, try again.\n");
         }
 
