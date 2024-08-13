@@ -4,9 +4,9 @@
 //funcion que evalua si un año es bisiesto
 //permite que se haga multiples veces por ejecucion
 //Es bisiesto si es divisible por 4 y no por 100 o si es divisible por 400
-int factorial(int n){
-    if(n >= 1){
-        return n * factorial(n - 1);
+int power(int n, int p){
+    if(p >= 1){
+        return n * power(n, p - 1);
     }
     else{
         return 1;
@@ -14,13 +14,15 @@ int factorial(int n){
 }
 
 int main(){
-    //Valor a evaluar
+    //Valor a elevar
     int y = 0;
+    //Potencia
+    int p = 0;
 
     //Variable para manejo de opciones
     int input;
 
-    printf("Options: \n1.Compute factorial of a number\n2.Exit\n");
+    printf("Options: \n1.Compute power\n2.Exit\n");
     scanf("%d", &input);
 
     //ciclo de menu
@@ -30,13 +32,15 @@ int main(){
             printf("Enter the number: \n");
             scanf("%d", &y);
             system("cls");
-
-            //Se puede calcular el factorial de enteros positivos unicamente
-            if( y < 0){
-                printf("Value must be equal or greater than 0.\n");
+            printf("Enter the power: \n");
+            scanf("%d", &p);
+            system("cls");
+            //Solo se pueden potencias positivas por la recursion
+            if( p < 0){
+                printf("Power must be equal or greater than 0.\n");
             }
             else{
-                printf("The result of %d! is: %d\n\n", y, factorial(y));
+                printf("%d to the power of %d is: %d\n\n", y, p, power(y, p));
             }
         }
         else{
@@ -45,7 +49,7 @@ int main(){
             printf("Invalid input, try again.\n\n");
         }
 
-        printf("Options: \n1.Compute factorial of a number\n2.Exit\n");
+        printf("Options: \n1.Compute power of a number\n2.Exit\n");
         scanf("%d", &input);
     }
 
