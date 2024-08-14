@@ -28,7 +28,6 @@ int main(){
         if(input == 1){
             printf("Enter the year: \n");
             scanf("%d", &y);
-            system("cls");
 
             //Se revisan años AC unicamente
             if( y <= 0){
@@ -40,7 +39,6 @@ int main(){
         }
         else{
             //entrada invalida
-            system("cls");
             printf("Invalid input, try again.\n\n");
         }
 

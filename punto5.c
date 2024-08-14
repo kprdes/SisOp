@@ -31,10 +31,8 @@ int main(){
         if(input == 1){
             printf("Enter the number: \n");
             scanf("%d", &y);
-            system("cls");
             printf("Enter the power: \n");
             scanf("%d", &p);
-            system("cls");
             //Solo se pueden potencias positivas por la recursion
             if( p < 0){
                 printf("Power must be equal or greater than 0.\n");
@@ -45,7 +43,6 @@ int main(){
         }
         else{
             //entrada invalida
-            system("cls");
             printf("Invalid input, try again.\n\n");
         }
 

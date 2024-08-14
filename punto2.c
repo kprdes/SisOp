@@ -31,7 +31,6 @@ int main(){
         if(input == 1){
             printf("Enter a positive integer: \n");
             scanf("%d", &n);
-            system("cls");
 
             //Los numeros primos deben ser mayores a uno
             if( n <= 0){
@@ -43,7 +42,6 @@ int main(){
         }
         else{
             //entrada invalida
-            system("cls");
             printf("Invalid input, try again.\n");
         }
 
