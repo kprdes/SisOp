@@ -37,7 +37,6 @@ int main(){
             //entrada invalida
             printf("Invalid input, try again.\n\n");
         }
-
         printf("Options: \n1.Check wether a number is even or odd\n2.Exit\n");
         scanf("%d", &input);
     }
