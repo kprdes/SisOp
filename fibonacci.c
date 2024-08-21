@@ -21,6 +21,7 @@ int fibonacci(int n){
 }
 
 int main(){
+    //poner guardia que no exceda 46, desborda tipo int
     int n;
     printf("Enter the number term of the Fibonacci series to be calculated:\n");
     scanf("%d", &n);
