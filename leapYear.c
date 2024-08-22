@@ -45,5 +45,5 @@ int main(){
         printf("Options: \n1.Check if a year is a leap year\n2.Exit\n");
         scanf("%d", &input);
     }
-
+    return 0;
 }

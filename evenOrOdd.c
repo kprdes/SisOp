@@ -41,4 +41,5 @@ int main(){
         scanf("%d", &input);
     }
 
+    return 0;
 }

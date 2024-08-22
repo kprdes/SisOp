@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int uppercase(char a){
+int lowercase(char a){
     if(a > 64 && a < 91){
         return 1;
     }
@@ -21,7 +21,7 @@ int main(){
     //Variable para manejo de opciones
     int input;
 
-    printf("Options: \n1.Check if a letter is uppercase\n2.Exit\n");
+    printf("Options: \n1.Check if a letter is lowercase\n2.Exit\n");
     scanf("%d", &input);
 
     //ciclo de menu
@@ -30,14 +30,14 @@ int main(){
             printf("Enter the letter: \n");
             scanf(" %c", &a);
 
-            c = uppercase(a);
+            c = lowercase(a);
 
             //1: la letra es mayuscula, 0: la letra es minuscula, -1: el caracter no es una letra
             if( c == 0){
-                printf("The letter isn't uppercase.\n\n");
+                printf("The letter is lowercase.\n\n");
             }
             else if(c == 1){
-                printf("The letter is uppercase.\n\n");
+                printf("The letter isn't lowercase.\n\n");
             }
             else if(c == -1){
                 printf("The character is not part of the English alphabet.\n\n");
@@ -48,7 +48,7 @@ int main(){
             printf("Invalid input, try again.\n\n");
         }
 
-        printf("Options: \n1.Check if a letter is uppercase\n2.Exit\n");
+        printf("Options: \n1.Check if a letter is lowercase\n2.Exit\n");
         scanf("%d", &input);
     }
 

@@ -46,5 +46,5 @@ int main(){
         printf("Options: \n1.Compute factorial of a number\n2.Exit\n");
         scanf("%d", &input);
     }
-
+    return 0;
 }
