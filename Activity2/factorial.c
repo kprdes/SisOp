@@ -1,9 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-//funcion que evalua si un año es bisiesto
-//permite que se haga multiples veces por ejecucion
-//Es bisiesto si es divisible por 4 y no por 100 o si es divisible por 400
 int factorial(int n){
     if(n >= 1){
         return n * factorial(n - 1);
