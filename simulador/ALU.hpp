@@ -5,7 +5,7 @@
 #include "AC.HPP"
 #include <string>
 #include <iostream>
-#include <sstream>
+
 
 using namespace std;
 
@@ -17,6 +17,7 @@ class ALU{
     int operation(int id);
     public:
     ALU();
+    void setOperation(int id);
     void Alu_Control();
     void ALU_ADD();
     void ALU_INC();

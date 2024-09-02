@@ -10,31 +10,56 @@ void MAR::setMAR(int mar){
     this->memoryAddress = mar;
 }
 
+int MAR::loadD1(){
+    return this->*D1;
+}
+int MAR::loadD2(){
+    return this->*D2;
+}
+int MAR::loadD3(){
+    return this->*D3;
+}
+void setD1(int tmp){
+    this->*D1 = tmp;
+}
+void setD2(int tmp){
+    this->*D2 = tmp;
+}
+void setD3(int tmp){
+    this->*D3 = tmp;
+}
+
+
 void MAR::interpretate_instruction(string& instruction) {
         istringstream iss(instruction);
         string op;
-        string arg1, arg2, arg3;
+        string Reg1, Reg2, Reg3;
 
-        iss >> op >> arg1 >> arg2 >> arg3;
+        iss >> op >> Reg1 >> Reg2 >> Reg3;
 
         if (op == "ADD") {
-            D1 = stoi(arg1);  // Convertimos el primer argumento a entero y lo asignamos a D1
-
-            if (arg2 == "NULL") {
-                D3 = 0;  // Representamos NULL como 0
+            setOperation(1);
+            this->*D1 = stoi(Reg1);  
+            if (Reg2 == "NULL") {
+                this->*D3 = 0; 
             } else {
-                D3 = stoi(arg2);  // Convertimos el segundo argumento si no es NULL
+                this->*D3 = stoi(Reg2);
             }
 
-            if (arg3 == "NULL") {
-                D4 = 0;  // Representamos NULL como 0
+            if (Reg3 == "NULL") {
+                this->*D4 = 0;
             } else {
-                D4 = stoi(arg3);  // Convertimos el tercer argumento si no es NULL
+                this->*D4 = stoi(Reg3);
             }
 
-            ALU_ADD();  // Llamamos a la función correspondiente para ejecutar la operación
-        } else {
-            std::cerr << "Operación no soportada: " << op << std::endl;
         }
-    }
-};
+        if (op == "INC") {
+            setOperation(2);
+            this->*D3 = stoi(Reg1);
+        }
+        if (op == "DEC") {
+            setOperation(3);
+            this->*D3 = stoi(Reg1);  
+        }
+
+}

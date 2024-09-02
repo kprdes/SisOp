@@ -1,6 +1,8 @@
 #include "ALU.hpp"
 
-
+void ALU::setOperation(int id){
+    this->operation = id;
+}
 
 void ALU::Alu_Control(){
     switch(this->operation){
@@ -32,15 +34,15 @@ void ALU::ALU_ADD(){
 }
 
 void ALU::ALU_INC(){
-    tmp = *D3;
-    tmp += 1;
-    *D3 = tmp;
+    int d3 = loadD3();
+    d3 += 1;
+    setD3(d3);
 }
 
 void ALU::ALU_DEC(){
-    tmp = *D3;
-    tmp += 1;
-    *D3 = tmp;
+    int d3 = loadD3();
+    d3 = d3 - 1;
+    setD3(d3);
 }
 
 
