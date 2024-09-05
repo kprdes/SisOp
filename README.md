@@ -40,7 +40,12 @@ This project is a simulation of a basic instruction cycle in C++. It includes co
    ```
 
 ## Usage
-1. The program starts in the CPU reading "Info.txt" which are the instructions to simulate the basic instruction cycle. At info.txt are all instructions, if you want to change or prove some instruction it is necessary to edit "Info.txt".
+1. The program starts in the CPU reading "Info.txt" which are the instructions to simulate the basic instruction cycle. At info.txt are all instructions, if you want to test the program you have to change the line 69 at CPU.hpp
+
+  ```cpp
+string filename = "Info.txt";
+```
+You havo to change that by the others files, Info2.txt or Info3.txt.
 
 2. The program support those instructions: 
 - SET
@@ -53,8 +58,10 @@ This project is a simulation of a basic instruction cycle in C++. It includes co
 - PAUSE
 - END.
 
-4. The program only support 3 NULL, the struct for write an instruction is: instruction D3 NULL NULL NULL
+3. The program only support 3 NULL, the struct for write an instruction is: instruction D3 NULL NULL NULL
 As can be seen the program might read 5 different things separete but the last or fourth NULL is not using.
+
+
 ## Classes Documentation
 
 ### Register
