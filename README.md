@@ -40,12 +40,7 @@ This project is a simulation of a basic instruction cycle in C++. It includes co
    ```
 
 ## Usage
-1. The program starts in the CPU reading "Info.txt" which are the instructions to simulate the basic instruction cycle. At info.txt are all instructions, if you want to test the program you have to change the line 69 at CPU.hpp
-
-  ```cpp
-string filename = "Info.txt";
-```
-You havo to change that by the others files, Info2.txt or Info3.txt.
+1. The program starts in the CPU reading "Info.txt" which are the instructions to simulate the basic instruction cycle. At info.txt are all instructions, if you want to test the program there is a menu to chose which file you want to test.
 
 2. The program support those instructions: 
 - SET
