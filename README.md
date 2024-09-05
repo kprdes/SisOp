@@ -2,6 +2,7 @@
 # CPU Simulation Project
 
 ## Table of Contents
+- [Members](#Members)
 - [Project Overview](#project-overview)
 - [Requirements](#requirements)
 - [Installation](#installation)
@@ -13,6 +14,12 @@
   - [ALU](#alu)
 - [Contributing](#contributing)
 - [License](#license)
+
+## Members
+
+- Jose Miguel Lopez Riani.
+- Kevin Pérez Román
+Pontificia Universidad Javeriana Cali
 
 ## Project Overview
 This project is a simulation of a basic instruction cycle in C++. It includes core components such as a `Register`, `CPU`, `Control Unit`, and an `ALU` . The goal is to simulate the functionality of a CPU that fetches, decodes, and executes instructions from memory.
