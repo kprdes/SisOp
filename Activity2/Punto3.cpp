@@ -39,7 +39,7 @@ int main() {
     bool exit = 1;
     int choice;
     while(exit){
-        cout << "Prime Number Checker Program" << endl;
+        cout << "Prime Number Checker" << endl;
         cout << "-------------------------------" << endl;
         cout << "1. Check if a single number is prime" << endl;
         cout << "2. Identify prime numbers within a list" << endl;
